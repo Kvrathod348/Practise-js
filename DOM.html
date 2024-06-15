@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS💪</title>
+    <style>
+        button{
+            margin: 50px 75px;
+            border: solid black 3px;
+            padding: 10px 20px;
+            background-color: rgb(167, 222, 204);
+            border-radius: 10px  ;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center ; background-color: rgb(168, 166, 166); padding: 50px;">WorkOut Schedule</h1>
+    <button onclick="Monday()" class="button">Monday</button>
+    
+    <button onclick="Tuestday()" class="button">Tuestday</button>
+    
+    <button onclick="Wednesday()" class="button">wednesday</button>
+
+    <button onclick="Thursday()" class="button">Friday</button>
+
+    <button class="button">Saturday</button>
+
+    <button class="button">Sunday</button>
+
+    <p id = "workout" style="text-align: center; background-color: black; color: bisque; font-size: larger;padding: 50px; width: 60%; margin-left: 200px ; border-radius: 55px ;" >No plan Schedule yet workoout 🥲</p>
+
+    <script>
+        function Monday(){
+            const workoutElement = document.getElementById("workout");
+            workoutElement.innerText = 'Today WorkOut Chest and Biceps be The Beast 🦬';
+        }
+        function Tuestday(){
+            const workoutElement = document.getElementById("workout");
+            workoutElement.innerText = 'Today WorkOut Back and Tricep Lets Do it Bro 🔥💪';
+        }
+        function Wednesday(){
+            const workoutElement = document.getElementById("workout");
+            workoutElement.innerText = 'Today WorkOut Legs and Shoulders Get Ready 👟';
+        }
+    </script>
+</body>
+</html>
