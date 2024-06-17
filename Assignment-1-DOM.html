@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Rectangle Calculator</title>
+    <style>
+        body {
+            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+
+        .container {
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            width: 400px;
+            margin: 40px auto;
+            border: solid rgb(107, 193, 227) 5px;
+            border-radius: 25px;
+        }
+
+        .app-title {
+            text-align: center;
+        }
+
+        .rectangle {
+            width: 30px;
+            height: 25px;
+            padding: 5px;
+        }
+
+        .input-number {
+            width: 300px;
+            height: 40px;
+            margin: 15px auto;
+            display: block;
+            font-size: large;
+            border-radius: 10px 2px;
+            text-align: center;
+        }
+
+        .result {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+        }
+
+        .btn {
+            background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+            width: 110px;
+            border-radius: 15px;
+            padding: 15px 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-title">Area of Rectangle <i class="fa-solid fa-calculator"></i>🧮</h1>
+
+        <br>
+
+        <input type="text" placeholder="Enter Lenght value 🥸" class="input-number" id="len">
+        <input type="text" placeholder="Enter Breath value 🧐" class="input-number" id="bre">
+
+        <p class="result" id="result">
+            ~ Total Area Value on Displayed 😁 ~
+        </p>
+
+        <div class="btn-container">
+            <button class="btn" onclick="cal()">Calculate</button>
+            <button class="btn" onclick="res()">Rest</button>
+        </div>
+
+    </div>
+
+    <script>
+        const lenghtInput = document.getElementById('len')
+        const breathInput = document.getElementById('bre')
+        const resultText = document.getElementById('result')
+
+        function cal() {
+
+            const result = parseInt(lenghtInput.value) * parseInt(breathInput.value)
+            resultText.innerText = `Total Area : ${result}`
+        }
+        function res() {
+            lenghtInput.value = ""
+            breathInput.value = ""
+            resultText.innerText = "~ Total Area Value on Displayed 😁 ~"
+        }
+    </script>
+
+
+    <script src="https://kit.fontawesome.com/76036bb16c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
