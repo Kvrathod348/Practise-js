@@ -10,6 +10,28 @@
             background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
         }
 
+        .head-title {
+            text-align: center;
+            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+            padding: 30px 0;
+        }
+
+        .cat-btn {
+            width: 75%;
+            margin: 20px auto;
+            margin-left: 220px;
+            padding: 40px;
+        }
+        .calc-btn{
+            background-image: linear-gradient(-225deg, #c5dcff 0%, #B8DCFF 48%, #6BBBFF 100%);
+            justify-content: space-around;
+            margin: 10px 50px;
+            padding: 20px;
+            font-size: medium ;
+            text-decoration: none;
+            border-radius: 22px;
+            box-shadow: #ffffff 0px 0px 10px;
+        }
         .container {
             background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             width: 400px;
@@ -60,8 +82,18 @@
 </head>
 
 <body>
+    <div class="main--container">
+        <h1 class="head-title">Calculator's ✨🧮</h1>
+        <div class="cat-btn">
+            <a href="./assignment-1-dom.html" class="calc-btn"><span>Area Of Reactangle</span></a>
+            <a href="./assignment-2.html" class="calc-btn"><span>Area Of Square</span></a>
+            <a href="./assignment-3.html" class="calc-btn"><span>Area Of Cricle</span></a>
+            <a href="./assignment-4.html" class="calc-btn"><span>Simple Intrest</span></a>
+        </div>
+    </div>
+
     <div class="container">
-        <h1 class="app-title">Area of Rectangle <i class="fa-solid fa-calculator"></i>🧮</h1>
+        <h1 class="app-title">Area of Rectangle  <i class="fa-solid fa-calculator"></i></h1>
 
         <br>
 
@@ -95,6 +127,7 @@
             resultText.innerText = "~ Total Area Value on Displayed 😁 ~"
         }
     </script>
+
 
 
     <script src="https://kit.fontawesome.com/76036bb16c.js" crossorigin="anonymous"></script>
