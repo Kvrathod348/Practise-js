@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array✨</title>
+</head>
+
+<body>
+
+    <script>
+        const student = ["Kunal", "Saurav", "Laxman", "Pranaye"]
+        console.log(student);
+
+        student.pop()
+        console.log(student);
+
+        student.push("Rahul");
+        console.log(student);
+
+        student.unshift("Subodh");
+        console.log(student);
+
+        student.splice(3, 4, "vrushali");
+        console.log(student);
+
+        const students = ["Kunal", "subodh", "saurav", "laxman", "pranaye", "shreya"]
+        console.log(student.join("✨"));
+
+        student.reverse();
+        console.log(student.join("✨"));
+
+        const arr = ["Kunal", "subodh", "saurav", "laxman", "pranaye", "shreya"]
+        arr.sort();
+        console.log(arr);
+    </script>
+    
+    <script>
+        arr.sort();
+        console.log("Accending :" + arr)
+
+        arr.reverse();
+        console.log("Decending :" + arr)
+
+        const index = arr.indexOf("Kunal");
+        console.log(index);
+
+    </script>
+
+</body>
+
+</html>
