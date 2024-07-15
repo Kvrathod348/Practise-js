@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Learn For</title>
+</head>
+<body>
+    <h1>For Loop</h1>
+    <script>
+        const friendlist =["Aniket","Shivam","Dhiraj","Subodh","Pranali","Chintu","Vrushali","Saurav","laxman","pranaye"]
+
+        const blockaccounts =["Subodh","Vrushali"]
+
+        function sentRequest(friendList){
+            console.log(`Sent The Request on Account ${friendList}`)
+        }
+
+        for(let i=0; i<friendlist.length; i++){
+            const friendList = friendlist[i]
+
+            if(blockaccounts.includes(friendList)){
+                console.warn(`You Block Acount ${friendList} dont sent the request`)
+    
+            }
+            else{
+                sentRequest(friendList)
+            }
+        }
+    </script>
+
+    <script>
+        for( i =0 ; i <=10 ; i++){
+            if(i==5){
+                console.error(`Skip the number`);
+                continue
+            }
+            console.log(i)
+        }
+    </script>
+
+    <script>
+        const birthdayinvite = ["Kunal","Aditya","Khushan","Dhiraj","Piyush","Shivam","Harsh","Akash","lushita","pranali","Nupur"]
+
+        const notinvite = ["Akash","lushita","Nupur"]
+
+        function sendInvition(birthdayInvite){
+            console.log(`Send The Invition on Account ${birthdayInvite}`)
+        }
+        for(i=0; i<birthdayinvite.length; i++){
+            const birthdayInvite = birthdayinvite[i]
+
+            if(notinvite.includes(birthdayInvite)){
+                console.warn(` ${birthdayInvite} dont send Birthday invition`)
+            }
+            else{
+                console.log(`Sent BirthDay invition ${birthdayInvite}`)
+            }
+        }
+    </script>
+</body>
+</html>
