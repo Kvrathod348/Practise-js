@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp📜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        .google-font {
+            font-family: "Edu AU VIC WA NT Hand", cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+
+        }
+
+        .heading {
+            width: 35vh;
+            font-size: 25px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .list-container {
+            background-color: aqua;
+            width: 320px;
+            height: 450px;
+            margin: 10px auto;
+            padding: 20px
+        }
+
+        .todo-item {
+            background-color: azure;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 5px;
+            padding: 10px 
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-todo {
+            width: 250px;
+            height: 30px;
+            margin: 0 10px;
+            border-radius: 10px;
+        }
+
+        .add-btn {
+            width: 55px;
+            border-radius: 8px;
+            height: 40px;
+            margin: -4px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading google-font">📜 TodoApp 📜</h1>
+    <div class="list-container" id="list-container">
+        <div class="todo-item google-font"> Write Task ✨ </div>
+    </div>
+    <div class="btn">
+        <input type="text" class="input-todo" id="input-todo">
+
+        <button class="add-btn google-font" onclick="add()">Add</button>
+    </div>
+
+    <script>
+        const todoList = []
+
+        function add() {
+            const inputElement = document.getElementById('input-todo')
+            todoList.push(inputElement.value);
+            inputElement.value = '';
+
+            readTodoList()
+        }
+        function readTodoList() {
+            const listContainer = document.getElementById('list-container');
+            listContainer.innerHTML = '';
+
+            for (const todoItem of todoList) {
+                listContainer.innerHTML += `<div class="todo-item google-font"> ${todoItem} </div>`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
